@@ -40,12 +40,6 @@ private fun frequencies(matrix: List<List<Int>>, f: Criteria) = matrix
     .map { it.getOrDefault(0, 0) to it.getOrDefault(1, 0) }
     .map { (zeros, ones) -> f(zeros, ones) }
 
-private fun <T> List<List<T>>.transpose() = (0 until first().size).map { colIdx ->
-    indices.map { rowIdx ->
-        this[rowIdx][colIdx]
-    }
-}
-
 private fun List<Int>.asBinary() = joinToString("").toInt(2)
 
 private typealias Criteria = (zeros: Int, ones: Int) -> Int
