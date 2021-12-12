@@ -21,3 +21,5 @@ fun <T> List<List<T>>.transpose() = (0 until first().size).map { colIdx ->
         this[rowIdx][colIdx]
     }
 }
+
+data class Point(val x: Int, val y: Int)

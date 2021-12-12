@@ -20,8 +20,6 @@ fun main() {
     println(part2(input))
 }
 
-private data class Point(val x: Int, val y: Int)
-
 private fun isStraightLine(it: Pair<Point, Point>) = it.first.x == it.second.x || it.first.y == it.second.y
 
 private fun expandIntoPoints(lines: List<Pair<Point, Point>>) = lines.fold(emptyList<Point>()) { allPoints, line ->
